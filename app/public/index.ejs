@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/assets/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="/">Home</a>
+            <a class="active" href="/">Settings</a>
+        </div>
+        <div class="row">
+            <div class="col sm-6">
+                <div id="scene_card_container" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Scenes</h5>
+                        <form id="scene-change" method="POST" action="/">
+                            <% for(var i=0; i < scenes.length; i++){ %>
+                                <button class="btn btn-dark mb-3" type="submit" name="name" value="<%= scenes[i].sceneItem %>"><%= scenes[i].sceneItem %></button>
+                            <% } %>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mb-6">
+                <div id="toggle_card_container" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Toggle On/Off</h5>
+                        <form id="toggle-button" method="POST" action="/">
+                            <button class="btn btn-dark" type="submit" name="name" value="true">ON</button>
+                            <button class="btn btn-dark" type="submit" name="name" value="false">OFF</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div id="brightness_card_container" class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Brightness</h5>
+                        <!-- add name field to this form to be called by jQuery function
+                            form[name='bright'] -->
+                        <form name="brightness" method="POST" action="/">
+                            <div class="form-group col-md-4">
+                                <input for="bright_id" class="form-control" type="number" placeholder="1-100" name="name" />
+                                <button id="bright_id" class="btn btn-dark" type="submit" value="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

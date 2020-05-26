@@ -1,0 +1,46 @@
+body {
+    background: lightgreen;
+    font-family: Verdana;
+    color: #fff;
+    text-align: center
+}
+
+h1 {
+    font-size: 48px;
+    color: dimgray;
+    text-align: center
+}
+
+h2 {
+    font-size: 36px;
+    color: dimgray;
+    text-align: center;
+}
+p {
+    font-size: 24px;
+    color: dimgray;
+    text-align: center;
+}
+
+form {
+    color: dimgray;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: darkblue;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #dddddd;
+    color: black;
+}
