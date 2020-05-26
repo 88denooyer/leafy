@@ -4,7 +4,7 @@ const YOUR_KEY = '';
 module.exports = {
     setEffect: function(name){
         const options = {
-            hostname: '192.168.1.166',
+            hostname: '192.168.x.x',
             port: 16021,
             path: '/api/v1/' + YOUR_KEY + '/effects/',
             method: 'PUT'
@@ -21,7 +21,7 @@ module.exports = {
 
     toggleOnOff: function(code){
         const options = {
-            hostname: '192.168.1.166',
+            hostname: '192.168.x.x',
             port: 16021,
             path: '/api/v1/' + YOUR_KEY + '/state/',
             method: 'PUT',
@@ -39,7 +39,7 @@ module.exports = {
 
     setBrightness: function(brightness){
         const options = {
-            hostname: '192.168.1.166',
+            hostname: '192.168.x.x',
             port: 16021,
             path: '/api/v1/' + YOUR_KEY + '/state/',
             method: 'PUT'
